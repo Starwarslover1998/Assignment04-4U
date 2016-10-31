@@ -91,6 +91,7 @@ public class Game {
                 board.putPeg(Color.red,d3.getRow(),d3.getCol());
                 d3.crash();
             }
+            //if any of the daleks hit the doctor
             if(d1.getRow()==who.getRow()&&d1.getCol()==who.getCol()||
                     d2.getRow()==who.getRow()&&d2.getCol()==who.getCol()||
                     d3.getRow()==who.getRow()&&d3.getCol()==who.getCol()){
@@ -102,6 +103,7 @@ public class Game {
                 board.displayMessage("The Daleks has captured The Doctor. Game Over.");
                 
             }
+            //if all daleks have crashed
             if(d2.getRow()==d3.getRow()&&d2.getCol()==d3.getCol()&&
                     d1.getRow()==d2.getRow()&&d1.getCol()==d2.getCol()&&
                     d3.getRow()==d1.getRow()&&d3.getCol()==d1.getCol()){
@@ -114,6 +116,7 @@ public class Game {
                 board.removePeg(d3.getRow(),d3.getCol());
                 board.putPeg(Color.red,d3.getRow(),d3.getCol());
                 d3.crash();
+                who.win();
                 board.displayMessage("All Daleks have crashed. You win.");
                 
             }
