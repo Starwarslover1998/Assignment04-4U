@@ -16,7 +16,10 @@ public class Dalek {
         this.row=row;
         this.col=col;
     }
-    
+    /**
+     * Daleks advance towards the Doctor
+     * @param doc Where the doctor is
+     */
     public void advanceTowards(Doctor doc){
         int docRow = doc.getRow();
         int docCol = doc.getCol();       
@@ -41,17 +44,30 @@ public class Dalek {
             col=col;
         }
     }
+    /**
+     * get the Dalek's current row
+     * @return The doctor's current row
+     */
     public int getRow(){
         return this.row;
     }
+    /**
+     * get the Dalek's current column
+     * @return The doctor's current column
+     */
     public int getCol(){
         return this.col;
     }
+    
     public void crash(){
         crashed=true;
         row=row;
         col=col;
     }
+    /**
+     * check the Dalek's condition
+     * @return the Dalek's condition(true if it's crashed, false if not)
+     */
     public boolean hasCrashed(){
         if (crashed==true){
             row=row;
@@ -66,6 +82,10 @@ public class Dalek {
         row=row;
         col=col;
     }
+    /**
+     * check the Doctor's condition
+     * @return the Doctor's condition(true if he's captured, false if not)
+     */
     public boolean hasCaptured(){
         if(captured==true){
             row=row;
