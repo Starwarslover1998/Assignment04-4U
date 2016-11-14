@@ -17,7 +17,11 @@ public class Doctor {
         this.row=theRow;
         this.col=theCol;
     }
-    
+    /**
+     * doctor moves based on where the cursor is
+     * @param newRow the Doctor's new row
+     * @param newCol the doctor's new Column
+     */
     public void move(int newRow, int newCol){
         if(row-newRow==1&&captured==false&&win==false){
             //Doctor moves to selected space if it's right next to where the Doctor is
@@ -51,9 +55,17 @@ public class Doctor {
             col=col;
         }
     }
+    /**
+     * get the Doctor's current row
+     * @return The doctor's current row
+     */
     public int getRow(){
         return this.row;
     }
+    /**
+     * get the Doctor's current column
+     * @return The doctor's current column
+     */
     public int getCol(){
         return this.col;
     }
